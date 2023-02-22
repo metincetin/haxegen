@@ -1,4 +1,4 @@
-package codegen;
+package haxegen;
 
 typedef ClassValues = {
     name:String,

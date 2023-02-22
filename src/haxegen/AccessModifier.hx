@@ -1,4 +1,4 @@
-package codegen;
+package haxegen;
 
 enum AccessModifier{
     Public;

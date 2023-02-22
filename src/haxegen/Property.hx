@@ -1,4 +1,4 @@
-package codegen;
+package haxegen;
 
 typedef PropertyValues = {
     name:String,

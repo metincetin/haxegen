@@ -1,6 +1,6 @@
-package codegen;
+package haxegen;
 
-import codegen.Function;
+import haxegen.Function;
 
 typedef InterfaceValues = {
     name:String,

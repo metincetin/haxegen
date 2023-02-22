@@ -1,4 +1,4 @@
-package codegen;
+package haxegen;
 
 class ClassBuilder{
     var classInstance: Class;

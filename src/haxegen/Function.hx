@@ -1,4 +1,4 @@
-package codegen;
+package haxegen;
 
 import haxe.display.Display.Define;
 
@@ -59,6 +59,8 @@ class Function {
         if (functionParameters.length > 0){
             var parameterNames = [for (v in functionParameters) v.name + ":" + v.type];
             ret += ' ${parameterNames.join(", ")}';
+        }else{
+            ret+="()";
         }
 
 		if (returnType != "") {
