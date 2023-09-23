@@ -1,11 +1,11 @@
 {
     "name": "haxegen",
     "classPath": "src",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "license": "MIT",
     "contributors": ["Metin"],
     "description": "Simple library to generate haxe code",
-    "releasenote": "Initial Commit",
+    "releasenote": "Minor fixes",
     "tags": ["generator"],
     "url": "https://github.com/metincetin/haxegen"
 }

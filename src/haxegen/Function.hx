@@ -36,9 +36,21 @@ class Function {
 
 	public function generate(indention:Int = 0) {
         var tabs = "";
+        var fb = functionBody;
+
         for (i in 0...indention){
             tabs += "\t";
         }
+
+        var lines = fb.split("\n");
+        if (lines.length > 1){
+
+            for (i in 0...lines.length){
+                lines[i] = tabs + "\t" + lines[i];
+            }
+            fb = lines.join("\n");
+        }
+
         if (isOverride && isStatic){
             throw ("Override functions cannot be static");
             return "";
@@ -58,7 +70,7 @@ class Function {
         ret += 'function ${name}';
         if (functionParameters.length > 0){
             var parameterNames = [for (v in functionParameters) v.name + ":" + v.type];
-            ret += ' ${parameterNames.join(", ")}';
+            ret += '(${parameterNames.join(", ")})';
         }else{
             ret+="()";
         }
@@ -67,7 +79,7 @@ class Function {
 			ret += ':${returnType}';
 		}
 		ret += " {\n";
-        ret += tabs + "\t" + functionBody;
+        ret += tabs + "\t" + fb;
 		ret += '\n${tabs}}';
 
 		return ret;
